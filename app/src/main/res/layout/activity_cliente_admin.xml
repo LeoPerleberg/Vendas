@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ClienteAdminActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+
+        <ImageView
+            android:id="@+id/imvFoto"
+            android:layout_width="190dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="51dp"
+            android:layout_marginBottom="27dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_cliente_icon_524x524" />
+
+        <EditText
+            android:id="@+id/etCodigoCliente"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="99dp"
+            android:layout_marginLeft="99dp"
+            android:layout_marginBottom="19dp"
+            android:ems="10"
+            android:hint="@string/hint_codigo_de_barras"
+            android:inputType="number"
+            android:text="@string/label_codigo_de_barras"
+            app:layout_constraintBottom_toTopOf="@+id/textView7"
+            app:layout_constraintEnd_toStartOf="@+id/searchView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <EditText
+            android:id="@+id/etNomeClienteAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="20dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Nome do cliente"
+            app:layout_constraintBottom_toTopOf="@+id/textView8"
+            app:layout_constraintStart_toStartOf="@+id/etCodigoCliente"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+        <EditText
+            android:id="@+id/etSobrenomeClienteAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Sobrenome do cliente"
+            app:layout_constraintBottom_toTopOf="@+id/textView9"
+            app:layout_constraintStart_toStartOf="@+id/etNomeClienteAdmin"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <EditText
+            android:id="@+id/etCpfClienteAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="CPF"
+            app:layout_constraintBottom_toTopOf="@+id/btInserirClienteAdmin"
+            app:layout_constraintStart_toStartOf="@+id/etSobrenomeClienteAdmin"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="35dp"
+            android:text="@string/hint_codigo_de_barras"
+            app:layout_constraintBottom_toTopOf="@+id/etCodigoCliente"
+            app:layout_constraintStart_toStartOf="@+id/etCodigoCliente"
+            app:layout_constraintTop_toBottomOf="@+id/imvFoto" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="33dp"
+            android:layout_marginRight="33dp"
+            android:text="@string/label_nome"
+            app:layout_constraintBottom_toTopOf="@+id/etNomeClienteAdmin"
+            app:layout_constraintEnd_toEndOf="@+id/etCodigoCliente"
+            app:layout_constraintTop_toBottomOf="@+id/etCodigoCliente" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sobrenome"
+            app:layout_constraintBottom_toTopOf="@+id/etSobrenomeClienteAdmin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNomeClienteAdmin" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CPF"
+            app:layout_constraintBottom_toTopOf="@+id/etCpfClienteAdmin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etSobrenomeClienteAdmin" />
+
+
+        <ImageButton
+            android:id="@+id/imb_pesquisar"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:background="@color/colorAccent"
+            android:contentDescription="@string/menu_pesquisar"
+            app:layout_constraintBottom_toBottomOf="@+id/etCodigoCliente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/etCodigoCliente"
+            app:layout_constraintTop_toTopOf="@+id/etCodigoCliente"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_search_white_24dp" />
+
+
+        <Button
+            android:id="@+id/btInserirClienteAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="93dp"
+            android:text="@string/bt_salvar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etCpfClienteAdmin" />
+
+        <ProgressBar
+            android:id="@+id/pb_foto_cliente_admin"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/imvFoto"
+            app:layout_constraintEnd_toEndOf="@+id/imvFoto"
+            app:layout_constraintStart_toStartOf="@+id/imvFoto"
+            app:layout_constraintTop_toTopOf="@+id/imvFoto" />
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
